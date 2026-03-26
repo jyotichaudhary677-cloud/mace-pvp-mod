@@ -7,18 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Setup Java
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '21'
-
       - name: Create jar
         run: |
           mkdir -p build/libs
-          echo "fake mod jar" > build/libs/mace-pvp-mod.jar
+          echo "mace pvp mod working" > build/libs/mace-pvp-mod.jar
 
       - name: Upload jar
         uses: actions/upload-artifact@v3
