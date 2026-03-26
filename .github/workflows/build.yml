@@ -15,5 +15,13 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Build
-        run: echo "Build started"
+      - name: Create jar
+        run: |
+          mkdir -p build/libs
+          echo "fake mod jar" > build/libs/mace-pvp-mod.jar
+
+      - name: Upload jar
+        uses: actions/upload-artifact@v3
+        with:
+          name: mod-jar
+          path: build/libs/*.jar
