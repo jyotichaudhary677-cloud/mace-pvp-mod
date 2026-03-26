@@ -1,0 +1,10 @@
+plugins {
+    id 'java'
+}
+
+group = 'me.curse.project'
+version = '1.0'
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+}
